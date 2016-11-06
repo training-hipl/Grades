@@ -33,14 +33,20 @@ namespace Grades
             foreach (float grade in grades)
             {
                 sum = sum + grade;
+                /*
                 if (grade < lowest)
                 {
                     lowest = grade;
                 }
+                */
+                lowest = Math.Min(grade, lowest); 
+                /*
                 if (grade > highest)
                 {
                     highest = grade;
                 }
+                */
+                highest = Math.Max(grade, highest);
             }
 
             stats.LowestGrade = lowest;
